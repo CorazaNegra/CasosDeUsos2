@@ -2,19 +2,20 @@
 
 left to right direction
 
-actor "Actor" as a
-actor "Actor 1" as b
+actor "Socio" as s
+actor "Biblioteca" as b
 
-rectangle sistema {
-    usecase "caso de uso" as UC1
-    usecase "caso de uso" as UC2
-    usecase "caso de uso" as UC3
+rectangle Biblioteca {
+    usecase "Reservar libro" as UC1
+    usecase "Prestar libro" as UC2
+    usecase "Devolver libro" as UC3
+    usecase "Actualizar catálogo" as UC4
 }
 
-a -- UC1
-a -- UC2
-a -- UC3
-b -- UC1
-b -- UC3
+s -- UC1
+s -- UC2
+s -- UC3
+b -- UC2
+b -- UC4
 
 @enduml
