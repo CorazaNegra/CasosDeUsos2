@@ -2,10 +2,12 @@
 
 actor "Agente" as a
 
-usecase "Evaluar\nSolicitud de crédito" as UC1
-usecase "Solicitar\ninformación adicional\nal cliente" as UC2
+usecase "Enviar\nSolicitud de crédito" as UC1
+usecase "Enviar\nSolicitud de crédito\npersonal" as UC2
+usecase "Enviar\nSolicitud de crédito\nempresarial" as UC3
 
 a -right-> UC1
-UC1 <.right. UC2 : <<extend>>\n Si ingresos < 1000
+UC1 <|-- UC2
+UC1 <|-- UC3
 
 @enduml
