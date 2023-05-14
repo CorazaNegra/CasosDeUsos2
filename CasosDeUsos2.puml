@@ -1,10 +1,30 @@
 @startuml
 
-actor " Cliente\nBancario" as cb
-actor "    Cliente\nCorporativo" as cp
-actor "Cliente\nNormal" as cn
+left to right direction
 
-cb <|-- cp
-cb <|-- cn
+actor "Empleado" as e
+actor "Administrador" as ad
+
+rectangle EmpresaPedidos {
+    usecase "Introducir pedido" as UC1
+    usecase "Cancelar pedido" as UC2
+    usecase "Obtener\nestado pedido" as UC3
+    usecase "Borrar pedido" as UC4
+    usecase "Buscar pedido" as UC5
+    usecase "Alta cliente" as UC6
+    usecase "Buscar cliente" as UC7
+    usecase "Nuevo producto" as UC8
+    usecase "Borrar producto" as UC9
+}
+
+e -- UC1
+e -- UC2
+e -- UC3
+e -- UC4
+e -- UC5
+e -- UC6
+e -- UC7
+ad -- UC8
+ad -- UC9
 
 @enduml
