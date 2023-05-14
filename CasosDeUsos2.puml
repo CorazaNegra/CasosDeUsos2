@@ -6,6 +6,6 @@ usecase "Evaluar\nSolicitud de crédito" as UC1
 usecase "Solicitar\ninformación adicional\nal cliente" as UC2
 
 a -right-> UC1
-UC1 <.right. UC2 : <<extend>>
+UC1 <.right. UC2 : <<extend>>\n Si ingresos < 1000
 
 @enduml
