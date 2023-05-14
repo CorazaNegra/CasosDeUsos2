@@ -1,21 +1,11 @@
 @startuml
 
-left to right direction
+actor "Bibliotecario" as b
 
-actor "Socio" as s
-actor "Biblioteca" as b
+usecase "baja socio" as UC1
+usecase "buscar socio" as UC2
 
-rectangle Biblioteca {
-    usecase "Reservar libro" as UC1
-    usecase "Prestar libro" as UC2
-    usecase "Devolver libro" as UC3
-    usecase "Actualizar catálogo" as UC4
-}
-
-s -- UC1
-s -- UC2
-s -- UC3
-b -- UC2
-b -- UC4
+b -right- UC1
+UC1 .right.> UC2 : <<include>>
 
 @enduml
