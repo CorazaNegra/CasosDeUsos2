@@ -1,13 +1,10 @@
 @startuml
 
-actor "Agente" as a
+actor " Cliente\nBancario" as cb
+actor "    Cliente\nCorporativo" as cp
+actor "Cliente\nNormal" as cn
 
-usecase "Enviar\nSolicitud de crédito" as UC1
-usecase "Enviar\nSolicitud de crédito\npersonal" as UC2
-usecase "Enviar\nSolicitud de crédito\nempresarial" as UC3
-
-a -right-> UC1
-UC1 <|-- UC2
-UC1 <|-- UC3
+cb <|-- cp
+cb <|-- cn
 
 @enduml
