@@ -1,11 +1,11 @@
 @startuml
 
-actor "Bibliotecario" as b
+actor "Agente" as a
 
-usecase "baja socio" as UC1
-usecase "buscar socio" as UC2
+usecase "Evaluar\nSolicitud de crédito" as UC1
+usecase "Solicitar\ninformación adicional\nal cliente" as UC2
 
-b -right- UC1
-UC1 .right.> UC2 : <<include>>
+a -right-> UC1
+UC1 <.right. UC2 : <<extend>>
 
 @enduml
